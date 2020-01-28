@@ -1,0 +1,164 @@
+/*-Меняем блочную модель для всего документа-*/
+*, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+/*=======================================*/
+
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,a,main,section,article,aside,footer,header,figure,figcaption,nav,ol,ul,li,form,table,tbody,tfoot,thead,tr,th,td{
+    width: 100%;/* устанавливает ширину блоков*/
+    
+    margin: 0;
+    /* обнуляем внешние отступы */
+
+    padding: 0;
+    /* обнуляем внутренние отступы */
+
+    border: 0;
+    /* убираем границы */
+
+    outline: 0;
+    /* убираем внешние контуры */
+
+    font-size: 100%;
+    /* задаем базовый размер шрифта, значение по умолчанию = 16px */
+    
+    line-height: 1.15;
+    /* устанавливает межстрочный интервал 1.15.*/
+    
+    font-style: normal; /*устанавливает стандартное отображение шрифта*/
+
+    -webkit-text-size-adjust: 100%;
+    /* не даёт устройствам на iOS  и другим браузерам, использующим webkit изменять контент для удобства чтения.*/
+
+    vertical-align: baseline;
+    /* устанавливаем базовое вертикальное выравнивание */
+
+    background: transparent;
+    /* устанавливаем фон прозрачным */
+}
+
+main,section,article,aside,footer,header,nav,img,figure{
+    display: block;
+    /*принудительно устанавливает свойства блока для семантических элементов, */
+}
+
+ol,ul {
+    list-style: none;
+    /* убираем маркеры для нумерованных и обычных списков */
+}
+
+table {
+    border-collapse: collapse;
+    /* убираем двойные рамки в таблице*/
+    border-spacing: 0;
+    /* убираем расстояние между двойными рамками в таблице */
+}
+
+a {
+    background-color: transparent;
+    /*убираем серый фон для активных ссылок в браузере IE 10*/
+    text-decoration: none;
+    /* убираем подчеркивание в ссылках*/
+}
+
+img {
+    border-style: none;
+    /* убирает границу вокруг картинок в IE 10*/
+    max-width: 100%;
+    height: auto;
+    /*Растягиваем картинки на весь размер контейнера*/
+}
+
+/*Формы=============================================== */
+
+button,input,optgroup,select,textarea {
+    font-family: inherit;
+    font-size: 100%;
+    /* тип и размер шрифта наследуется от родительского элемента */
+    line-height: 1.15;
+    /* межстрочный интервал – 1.15 */
+    margin: 0;
+    /* удаляется внешний отступ для этих элементов в браузерах Firefox и Safari */
+}
+
+button,input {
+    overflow: visible;
+    /*показывать всё содержимое при переполнении*/
+}
+
+button,
+select {
+    text-transform: none;
+    /*отображать текст в неизменном виде */
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    /*присваивается атрибут по умолчанию: BATTON*/
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+    /* убираем рамку и внутренние отступы */
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+    /*устанавливаем параметры внешней рамки кнопки BUTTON при наведении на неё (толщина 1рх, точечная, цветом текста)*/
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    /*устанавливает размер с учётом рамки */
+    padding: 0;
+    /*убирает внутренние отступы */
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+    /* для спин-кнопок элемента INPUT устанавливается высота с параметром AUTO */
+}
+
+[type="search"]
+
+/*для элемента INPUT с типом SEARCH устанавливается:*/
+    {
+    -webkit-appearance: textfield;
+    /*вид - текстовое поле*/
+    outline-offset: -2px;
+    /*корректирует внешнюю границу*/
+}
+
+[type="search"]::-webkit-search-decoration
+
+/*для элемента INPUT с типом SEARCH */
+    {
+    -webkit-appearance: none;
+    /*убирает ненужную стилизацию*/
+}
+
+::-webkit-file-upload-button
+
+/*для элемента INPUT с типом FILE*/
+    {
+    -webkit-appearance: button;
+    /*устанавливает внешний вид кнопки выбора файла*/
+    font: inherit;
+    /*меняет установки шрифта на `inherit`*/
+}
